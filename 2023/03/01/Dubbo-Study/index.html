@@ -1,0 +1,526 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="请相信,这个世界真的有人过着你想要的生活" href="https://yangkecheng.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="请相信,这个世界真的有人过着你想要的生活" href="https://yangkecheng.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="请相信,这个世界真的有人过着你想要的生活" href="https://yangkecheng.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.1.1">
+
+  
+  <meta name="keywords" content="关键词1,关键词2" />
+
+
+<link rel="canonical" href="https://yangkecheng.github.io/2023/03/01/Dubbo-Study/">
+
+
+
+  <title>
+Dubbo Study - Java |
+YangKc Blog = 请相信,这个世界真的有人过着你想要的生活</title>
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Dubbo Study
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-01 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-01T00:00:00+08:00">2023-03-01</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">YangKc Blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="http://rshecpthw.hb-bkt.clouddn.com/img/dubble.png">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Java/" itemprop="item" rel="index" title="分类于 Java"><span itemprop="name">Java</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://yangkecheng.github.io/2023/03/01/Dubbo-Study/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="YangKeCheng">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="请相信,这个世界真的有人过着你想要的生活">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <div class="note info">
+<p>这篇文章转载自我在 CSDN 上的总结<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTcwNTA0NS9hcnRpY2xlL2RldGFpbHMvMTA0MTcyMTMzP3NwbT0xMDAxLjIwMTQuMzAwMS41NTAx">《Dubbo 学习笔记》</span>。</p>
+</div>
+<h1 id="分布式简要说明"><a class="markdownIt-Anchor" href="#分布式简要说明">#</a> 分布式简要说明</h1>
+<p><strong>Dubbo 是用于分布式系统的框架所以我们要先了解什么是分布式</strong><br>
+<mark>分布式系统是若干独立 计算机的集合，这些计算机对于用户来说就像单个相关系统。</mark></p>
+<p>老式系统 (单一应用架构) 就是把一个系统，统一放到一个服务器当中然后每一个服务器上放一个系统，如果说要更新代码的话，每一个服务器上的系统都要重新去部署十分的麻烦。</p>
+<p>而分布式系统就是将一个完整的系统拆分成多个不同的服务，然后在将每一个服务单独的放到一个服务器当中。(三个臭皮匠赛过诸葛亮)</p>
+<h1 id="应用架构的发展演变"><a class="markdownIt-Anchor" href="#应用架构的发展演变">#</a> 应用架构的发展演变</h1>
+<p><img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/dubbo/dubbo01.png" alt="应用架构的发展演变"><br>
+<mark> ORM</mark><br>
+<strong> 单一应用架构</strong>：一个项目装到一个服务器当中，也可以运行多个服务器每一个服务器当中都装一个项目。<br>
+缺点：1. 如果要添加某一个功能的话就要把一个项目重新打包，在分别部署到每一个服务器当中去。2. 如果后期项目越来越大的话单台服务器跑一个项目压力会很大的。会不利于维护，开发和程序的性能。<br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/dubbo/dubbo02.png" alt="单一应用架构"><br>
+<mark> MVC</mark><br>
+<strong> 垂直应用架构</strong>：将应用切割成几个互不相干的小应用，在将每个小应用独立放到一个服务器上，如果哪一个应用的访问数量多就多加几台服务器。<br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/dubbo/dubbo03.png" alt="垂直应用架构"><br>
+<mark> RPC</mark><br>
+<strong> 分布式应用架构 (远程过程调用)</strong>：当垂直应用越来越多，应用之间交互不可避免，将核心业务抽取出来，作为独立的服务，逐渐形成稳定的服务中心，使前端应用能更快速的响应多变的市场需求。<br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/dubbo/dubbo04.png" alt="分布式应用架构"><br>
+<mark> SOA</mark><br>
+<strong> 流动计算架构</strong>：在分布式应用架构的基础上增加了一个<strong>调度、治理中心</strong>基于访问压力实时管理集群容量、提高集群的利用率，用于提高机器利用率的 资源调度和治理中心 (SOA) 是关键 <strong>(不浪费计算机资源)</strong><br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/dubbo/dubbo05.png" alt="流动计算架构"></p>
+<h1 id="dubbo"><a class="markdownIt-Anchor" href="#dubbo">#</a> Dubbo</h1>
+<p><mark>官网:<span class="exturl" data-url="aHR0cDovL2R1YmJvLmFwYWNoZS5vcmcvZW4tdXMvaW5kZXguaHRtbA==">http://dubbo.apache.org/en-us/index.html</span></mark></p>
+<p>前面说过分布式系统是将一个系统拆分为多个不同的服务，那么对于一个像淘宝或者京东一样的大型系统能拆分出很多个服务来，这些服务我们该如何进行管理和调用呢！</p>
+<h2 id="设计架构"><a class="markdownIt-Anchor" href="#设计架构">#</a> 设计架构</h2>
+<p>这个是 apache 官网上对 Duboo 设计架构的一张说明图，对于我一个初学者来说我可能看了没有什么感觉！<br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/dubbo/dubbo06.png" alt="Dubbo架构"><br>
+然后我又对于这张图进行了个人化的理解和说明‍(｀・ω・´) 请谨慎参考哦！</p>
+<p><img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/dubbo/dubbo07.png" alt="Dubbo设计架构"><br>
+<strong>服务提供者（Provider）</strong>：暴露服务的服务提供方，服务提供者在启动时，向注册中心注册自己提供的服务。</p>
+<p><strong>服务消费者（Consumer）</strong>: 调用远程服务的服务消费方，服务消费者在启动时，向注册中心订阅自己所需的服务，服务消费者，从提供者地址列表中，基于软负载均衡算法，选一台提供者进行调用，如果调用失败，再选另一台调用。</p>
+<p><strong>注册中心（Registry）</strong>：注册中心返回服务提供者地址列表给消费者，如果有变更，注册中心将基于长连接推送变更数据给消费者</p>
+<p><strong>监控中心（Monitor）</strong>：服务消费者和提供者，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心</p>
+<h2 id="工程架构"><a class="markdownIt-Anchor" href="#工程架构">#</a> 工程架构</h2>
+<p>我在学习的过程中看到的用于 Dubbo 的工程架构图 (｀・ω・´)<br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/dubbo/dubbo08.png" alt="工程架构图"><br>
+<strong> gmall-interface (公共接口层)</strong><br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/dubbo/dubbo09.png" alt="服务提供者"><br>
+<strong> gmall-user：用户模块（对用户接口的实现）</strong><mark>作为服务提供者</mark><br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/dubbo/dubbo10.png" alt="服务提供者"></p>
+<p><strong>gmall-order-web：订单模块（调用用户模块）</strong><mark>作为服务消费者</mark><br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/dubbo/dubbo11.png" alt="服务消费者"></p>
+<h2 id="配置文件"><a class="markdownIt-Anchor" href="#配置文件">#</a> 配置文件</h2>
+<p><mark><strong>对服务提供者的文件配置</strong></mark><br>
+<strong> 1、引入 dubbo</strong></p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 引入dubbo <span class="token operator">--</span><span class="token operator">></span></pre></td></tr><tr><td data-num="2"></td><td><pre>		<span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="3"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">></span></span>com<span class="token punctuation">.</span>alibaba<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span></pre></td></tr><tr><td data-num="4"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">></span></span>dubbo<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span></pre></td></tr><tr><td data-num="5"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">></span></span><span class="token number">2.6</span><span class="token number">.2</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span></pre></td></tr><tr><td data-num="6"></td><td><pre>		<span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span></pre></td></tr><tr><td data-num="7"></td><td><pre>		</pre></td></tr><tr><td data-num="8"></td><td><pre>		<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 由于我们使用zookeeper作为注册中心，所以需要操作zookeeper</pre></td></tr><tr><td data-num="9"></td><td><pre>		dubbo <span class="token number">2.6</span>以前的版本引入zkclient操作zookeeper </pre></td></tr><tr><td data-num="10"></td><td><pre>		dubbo <span class="token number">2.6</span>及以后的版本引入curator操作zookeeper</pre></td></tr><tr><td data-num="11"></td><td><pre>		下面两个zk客户端根据dubbo版本<span class="token number">2</span>选<span class="token number">1</span>即可<span class="token operator">--</span><span class="token operator">></span></pre></td></tr><tr><td data-num="12"></td><td><pre>		</pre></td></tr><tr><td data-num="13"></td><td><pre>		<span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="14"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">></span></span>com<span class="token punctuation">.</span><span class="token number">101</span>tec<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span></pre></td></tr><tr><td data-num="15"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">></span></span>zkclient<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span></pre></td></tr><tr><td data-num="16"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">></span></span><span class="token number">0.10</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span></pre></td></tr><tr><td data-num="17"></td><td><pre>		<span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span></pre></td></tr><tr><td data-num="18"></td><td><pre>		</pre></td></tr><tr><td data-num="19"></td><td><pre>		<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> curator<span class="token operator">-</span>framework <span class="token operator">--</span><span class="token operator">></span></pre></td></tr><tr><td data-num="20"></td><td><pre>		<span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="21"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">></span></span>org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>curator<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span></pre></td></tr><tr><td data-num="22"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">></span></span>curator<span class="token operator">-</span>framework<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span></pre></td></tr><tr><td data-num="23"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">></span></span><span class="token number">2.12</span><span class="token number">.0</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span></pre></td></tr><tr><td data-num="24"></td><td><pre>		<span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span></pre></td></tr></table></figure><p><strong>2、配置提供者</strong></p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>当前应用的名字  <span class="token operator">--</span><span class="token operator">></span></pre></td></tr><tr><td data-num="2"></td><td><pre>	<span class="token operator">&lt;</span>dubbo<span class="token operator">:</span>application name<span class="token operator">=</span><span class="token string">"gmall-user"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>dubbo<span class="token operator">:</span>application<span class="token operator">></span></pre></td></tr><tr><td data-num="3"></td><td><pre>	<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>指定注册中心的地址  <span class="token operator">--</span><span class="token operator">></span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token operator">&lt;</span>dubbo<span class="token operator">:</span>registry address<span class="token operator">=</span><span class="token string">"zookeeper://118.24.44.169:2181"</span> <span class="token operator">/</span><span class="token operator">></span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>使用dubbo协议，将服务暴露在<span class="token number">20880</span>端口  <span class="token operator">--</span><span class="token operator">></span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token operator">&lt;</span>dubbo<span class="token operator">:</span>protocol name<span class="token operator">=</span><span class="token string">"dubbo"</span> port<span class="token operator">=</span><span class="token string">"20880"</span> <span class="token operator">/</span><span class="token operator">></span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 指定需要暴露的服务 <span class="token operator">--</span><span class="token operator">></span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token operator">&lt;</span>dubbo<span class="token operator">:</span>service <span class="token keyword">interface</span><span class="token operator">=</span><span class="token string">"com.atguigu.gmall.service.UserService"</span> ref<span class="token operator">=</span><span class="token string">"userServiceImpl"</span> <span class="token operator">/</span><span class="token operator">></span></pre></td></tr></table></figure><p><mark><strong>对服务消费者的文件配置</strong></mark><br>
+<strong> 1、引入 dubbo</strong></p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 引入dubbo <span class="token operator">--</span><span class="token operator">></span></pre></td></tr><tr><td data-num="2"></td><td><pre>		<span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="3"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">></span></span>com<span class="token punctuation">.</span>alibaba<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span></pre></td></tr><tr><td data-num="4"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">></span></span>dubbo<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span></pre></td></tr><tr><td data-num="5"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">></span></span><span class="token number">2.6</span><span class="token number">.2</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span></pre></td></tr><tr><td data-num="6"></td><td><pre>		<span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span></pre></td></tr><tr><td data-num="7"></td><td><pre>		</pre></td></tr><tr><td data-num="8"></td><td><pre>		<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 由于我们使用zookeeper作为注册中心，所以需要引入zkclient和curator操作zookeeper <span class="token operator">--</span><span class="token operator">></span></pre></td></tr><tr><td data-num="9"></td><td><pre>		<span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="10"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">></span></span>com<span class="token punctuation">.</span><span class="token number">101</span>tec<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span></pre></td></tr><tr><td data-num="11"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">></span></span>zkclient<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span></pre></td></tr><tr><td data-num="12"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">></span></span><span class="token number">0.10</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span></pre></td></tr><tr><td data-num="13"></td><td><pre>		<span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span></pre></td></tr><tr><td data-num="14"></td><td><pre>		</pre></td></tr><tr><td data-num="15"></td><td><pre>		<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> curator<span class="token operator">-</span>framework <span class="token operator">--</span><span class="token operator">></span></pre></td></tr><tr><td data-num="16"></td><td><pre>		<span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="17"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">></span></span>org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>curator<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span></pre></td></tr><tr><td data-num="18"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">></span></span>curator<span class="token operator">-</span>framework<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span></pre></td></tr><tr><td data-num="19"></td><td><pre>			<span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">></span></span><span class="token number">2.12</span><span class="token number">.0</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span></pre></td></tr><tr><td data-num="20"></td><td><pre>		<span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span></pre></td></tr></table></figure><p><strong>2、配置消费者信息</strong></p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 应用名 <span class="token operator">--</span><span class="token operator">></span></pre></td></tr><tr><td data-num="2"></td><td><pre>	<span class="token operator">&lt;</span>dubbo<span class="token operator">:</span>application name<span class="token operator">=</span><span class="token string">"gmall-order-web"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>dubbo<span class="token operator">:</span>application<span class="token operator">></span></pre></td></tr><tr><td data-num="3"></td><td><pre>	<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 指定注册中心地址 <span class="token operator">--</span><span class="token operator">></span></pre></td></tr><tr><td data-num="4"></td><td><pre>	<span class="token operator">&lt;</span>dubbo<span class="token operator">:</span>registry address<span class="token operator">=</span><span class="token string">"zookeeper://118.24.44.169:2181"</span> <span class="token operator">/</span><span class="token operator">></span></pre></td></tr><tr><td data-num="5"></td><td><pre>	<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 生成远程服务代理，可以和本地bean一样使用demoService <span class="token operator">--</span><span class="token operator">></span></pre></td></tr><tr><td data-num="6"></td><td><pre>	<span class="token operator">&lt;</span>dubbo<span class="token operator">:</span>reference id<span class="token operator">=</span><span class="token string">"userService"</span> <span class="token keyword">interface</span><span class="token operator">=</span><span class="token string">"com.atguigu.gmall.service.UserService"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>dubbo<span class="token operator">:</span>reference<span class="token operator">></span></pre></td></tr></table></figure><h2 id="高可用"><a class="markdownIt-Anchor" href="#高可用">#</a> 高可用</h2>
+<p><strong>1.zookeeper 宕机与 Dubbo 直连</strong><br>
+现象:zookeeper 注册中心宕机，还可以消费 Dubbo 暴露的服务。<br>
+<mark>原因：健壮性</mark></p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token number">1</span>.监控中心宕掉不影响使用，只是丢失部分采样数据</pre></td></tr></table></figure><figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token number">2</span>.数据库宕掉后，注册中心仍能通过缓存提供服务列表查询，但不能注册新服务</pre></td></tr></table></figure><figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token number">3</span>.注册中心对等集群，任意一台宕掉后，将自动切换到另一台</pre></td></tr></table></figure><figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token number">4</span>.注册中心全部宕掉后，服务提供者和服务消费者仍能通过本地缓存通讯</pre></td></tr></table></figure><figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token number">5</span>.服务提供者无状态，任意一台宕掉后，不影响使用</pre></td></tr></table></figure><figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token number">6</span>.服务提供者无状态，任意一台宕掉后，不影响使用</pre></td></tr></table></figure>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-04-02 18:39:39" itemprop="dateModified" datetime="2023-04-02T18:39:39+08:00">2023-04-02</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>打赏一哈吧~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wx.png" alt="YangKeCheng 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>YangKeCheng <i class="ic i-at"><em>@</em></i>请相信,这个世界真的有人过着你想要的生活
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://yangkecheng.github.io/2023/03/01/Dubbo-Study/" title="Dubbo Study">https://yangkecheng.github.io/2023/03/01/Dubbo-Study/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/02/28/hello-world/" itemprop="url" rel="prev" data-background-image="http:&#x2F;&#x2F;rshecpthw.hb-bkt.clouddn.com&#x2F;img&#x2F;bg.jpg" title="Hello World">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> life</span>
+  <h3>Hello World</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/03/02/Tomcat-Nginx-Service-Registry/" itemprop="url" rel="next" data-background-image="http:&#x2F;&#x2F;rshecpthw.hb-bkt.clouddn.com&#x2F;img&#x2F;bg.jpg" title="Tomcat And Nginx 服务注册">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Java</span>
+  <h3>Tomcat And Nginx 服务注册</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E"><span class="toc-number">1.</span> <span class="toc-text"> 分布式简要说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E5%8F%91%E5%B1%95%E6%BC%94%E5%8F%98"><span class="toc-number">2.</span> <span class="toc-text"> 应用架构的发展演变</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dubbo"><span class="toc-number">3.</span> <span class="toc-text"> Dubbo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%9E%B6%E6%9E%84"><span class="toc-number">3.1.</span> <span class="toc-text"> 设计架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E7%A8%8B%E6%9E%B6%E6%9E%84"><span class="toc-number">3.2.</span> <span class="toc-text"> 工程架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.</span> <span class="toc-text"> 配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E5%8F%AF%E7%94%A8"><span class="toc-number">3.4.</span> <span class="toc-text"> 高可用</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2023/03/01/Dubbo-Study/" rel="bookmark" title="Dubbo Study">Dubbo Study</a></li><li><a href="/2023/03/02/Tomcat-Nginx-Service-Registry/" rel="bookmark" title="Tomcat And Nginx 服务注册">Tomcat And Nginx 服务注册</a></li><li><a href="/2023/03/07/BS-Transfer-CS/" rel="bookmark" title="B/S项目调用C/S项目并嵌套页面">B/S项目调用C/S项目并嵌套页面</a></li><li><a href="/2023/03/08/Mysql-Install/" rel="bookmark" title="Mysql Install">Mysql Install</a></li><li><a href="/2023/03/13/Oracle-Install/" rel="bookmark" title="Oracle Install">Oracle Install</a></li><li><a href="/2023/03/16/Oracle-And-Mysql/" rel="bookmark" title="Oracle和Mysql的区别">Oracle和Mysql的区别</a></li><li><a href="/2023/03/21/Tomcat/" rel="bookmark" title="Tomcat谈一谈">Tomcat谈一谈</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="YangKeCheng"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">YangKeCheng</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">9</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lhbmdrZWNoZW5n" title="https:&#x2F;&#x2F;github.com&#x2F;yangkecheng"><i class="ic i-github"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9ib3ktNi01Ny03NA==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;boy-6-57-74"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTE1MjcwMjU0NDE=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;1527025441"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vNzQzNDY0OTM0OS9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="https:&#x2F;&#x2F;weibo.com&#x2F;7434649349&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo&amp;is_all&#x3D;1"><i class="ic i-weibo"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/02/28/hello-world/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/03/02/Tomcat-Nginx-Service-Registry/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/16/Oracle-And-Mysql/" title="Oracle和Mysql的区别">Oracle和Mysql的区别</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/life/" title="分类于 life">life</a>
+</div>
+
+    <span><a href="/2023/02/28/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/21/Tomcat/" title="Tomcat谈一谈">Tomcat谈一谈</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/08/Mysql-Install/" title="Mysql Install">Mysql Install</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/02/Tomcat-Nginx-Service-Registry/" title="Tomcat And Nginx 服务注册">Tomcat And Nginx 服务注册</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/07/BS-Transfer-CS/" title="B&#x2F;S项目调用C&#x2F;S项目并嵌套页面">B/S项目调用C/S项目并嵌套页面</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/19/Nvm-good/" title="NVM 香香的">NVM 香香的</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/13/Oracle-Install/" title="Oracle Install">Oracle Install</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/01/Dubbo-Study/" title="Dubbo Study">Dubbo Study</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">YangKeCheng @ YangKc Blog</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/03/01/Dubbo-Study/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,copy_tex: true,
+    katex: true,mermaid: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',quiz: {
+      choice: "单选题",
+      multiple: "多选题",
+      true_false: "判断题",
+      essay: "问答题",
+      gap_fill: "填空题",
+      mistake: "错题备注"
+    },
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.1.1"></script>
+
+
+
+
+</body>
+</html>

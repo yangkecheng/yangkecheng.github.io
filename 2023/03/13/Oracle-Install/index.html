@@ -1,0 +1,506 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="请相信,这个世界真的有人过着你想要的生活" href="https://yangkecheng.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="请相信,这个世界真的有人过着你想要的生活" href="https://yangkecheng.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="请相信,这个世界真的有人过着你想要的生活" href="https://yangkecheng.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.1.1">
+
+  
+  <meta name="keywords" content="关键词1,关键词2" />
+
+
+<link rel="canonical" href="https://yangkecheng.github.io/2023/03/13/Oracle-Install/">
+
+
+
+  <title>
+Oracle Install - Java |
+YangKc Blog = 请相信,这个世界真的有人过着你想要的生活</title>
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Oracle Install
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-13 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-13T00:00:00+08:00">2023-03-13</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">YangKc Blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="http://rshecpthw.hb-bkt.clouddn.com/img/oracle.jpg">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Java/" itemprop="item" rel="index" title="分类于 Java"><span itemprop="name">Java</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://yangkecheng.github.io/2023/03/13/Oracle-Install/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="YangKeCheng">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="请相信,这个世界真的有人过着你想要的生活">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <div class="note info">
+<p>💡  java 环境配置系列，Oracle 详解及安装配置。</p>
+</div>
+<h1 id="oracle"><a class="markdownIt-Anchor" href="#oracle">#</a> Oracle</h1>
+<p>Oracle 当今使用最广泛最流行的关系型数据库，由甲骨文公司开发、运营与维护。<br>
+在数据库领域中一直处于领先地位，系统可移植性好、使用方便、功能与性能强大、效率高，适用于大、中、小软件开发。放眼当下因高效率（适应高吞吐量）、可靠性好仍是开发商业软件最好的选择（就是要钱还贵）。</p>
+<h1 id="安装时的坑"><a class="markdownIt-Anchor" href="#安装时的坑">#</a> 安装时的坑</h1>
+<p>前几天在安装的时候在第九步的时候出现的问题<br>
+导致安装完以后 sys 的默认密码登录不进去 原因是因为 在给所有账户设置默认口令的时候输入的是 ROOT 不符合 Oracle 的建议标准<br>
+ Oracle 就会 sys 的密码进行更改，我们只需要安装下面几个步骤使用超级管理员新建用户设置密码进行连接就可以了<br>
+ win+R 进行 cmd</p>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>-- 使用超级管理员登录</pre></td></tr><tr><td data-num="2"></td><td><pre>CONN sys&#x2F;change_on_install AS SYSDBA ;</pre></td></tr></table></figure><figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>-- 创建 c##scott 用户</pre></td></tr><tr><td data-num="2"></td><td><pre>CREATE USER c##scott IDENTIFIED BY tiger ;</pre></td></tr></table></figure><figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>-- 为用户授权</pre></td></tr><tr><td data-num="2"></td><td><pre>GRANT CONNECT,RESOURCE,UNLIMITED TABLESPACE TO c##scott CONTAINER&#x3D;ALL ;</pre></td></tr></table></figure><figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>-- 设置用户使用的表空间</pre></td></tr><tr><td data-num="2"></td><td><pre>ALTER USER c##scott DEFAULT TABLESPACE USERS;</pre></td></tr><tr><td data-num="3"></td><td><pre>ALTER USER c##scott TEMPORARY TABLESPACE TEMP;</pre></td></tr></table></figure><figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>-- 使用 c##scott 用户登录</pre></td></tr><tr><td data-num="2"></td><td><pre>CONNECT c##scott&#x2F;tiger</pre></td></tr></table></figure><p>如果要重新 sys 的密码 还有一种方法，安装完数据库以后在 Windows 菜单栏中有 Database Configuration Assistant<br>
+ 这个是进行表空间配置的，我们可以使用这个进行操作表空间，在操作表空间的同时可以再次的给 sys 账户设置统一默认密码</p>
+<h1 id="下载及安装"><a class="markdownIt-Anchor" href="#下载及安装">#</a> 下载及安装</h1>
+<h2 id="downloads"><a class="markdownIt-Anchor" href="#downloads">#</a> Downloads</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly9wYW4ucXVhcmsuY24vcy83MzRmY2IyMmU1ZDE=">Oracle11 下载 夸克网盘</span><br>
+ <code>提取码：fr8P</code></p>
+<h2 id="install"><a class="markdownIt-Anchor" href="#install">#</a> Install</h2>
+<p>我们将下载好的 Oracle 解压出来，并双击 setup.exe<br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/oracle/oracle01.png" alt="在这里插入图片描述"><br>
+点击继续即可 环境不满足要求是因为 Windows 的原因<br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/oracle/oracle02.png" alt="在这里插入图片描述"><br>
+打对钩下一步<br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/oracle/oracle03.png" alt="在这里插入图片描述"><br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/oracle/oracle04.png" alt="在这里插入图片描述"><br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/oracle/oracle05.png" alt="在这里插入图片描述"><br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/oracle/oracle06.png" alt="在这里插入图片描述"><br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/oracle/oracle07.png" alt="在这里插入图片描述"><br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/oracle/oracle08.png" alt="在这里插入图片描述"><br>
+这里就要注意了 因为我输入口令的时候输入的是 root 不符合 Oracle 建议的标准 但是我还是点击继续了<br>
+这样会导致他默认密码的错误 上面已经给出了解决方案<br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/oracle/oracle09.png" alt="在这里插入图片描述"><br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/oracle/oracle10.png" alt="在这里插入图片描述"><br>
+等待 100% 就可以了<br>
+<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/oracle/oracle11.png" alt="在这里插入图片描述"></p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-04-02 18:39:39" itemprop="dateModified" datetime="2023-04-02T18:39:39+08:00">2023-04-02</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>打赏一哈吧~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wx.png" alt="YangKeCheng 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>YangKeCheng <i class="ic i-at"><em>@</em></i>请相信,这个世界真的有人过着你想要的生活
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://yangkecheng.github.io/2023/03/13/Oracle-Install/" title="Oracle Install">https://yangkecheng.github.io/2023/03/13/Oracle-Install/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/03/08/Mysql-Install/" itemprop="url" rel="prev" data-background-image="http:&#x2F;&#x2F;rshecpthw.hb-bkt.clouddn.com&#x2F;img&#x2F;mysql.png" title="Mysql Install">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Java</span>
+  <h3>Mysql Install</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/03/16/Oracle-And-Mysql/" itemprop="url" rel="next" data-background-image="http:&#x2F;&#x2F;rshecpthw.hb-bkt.clouddn.com&#x2F;img&#x2F;mysqlAndOracle.png" title="Oracle和Mysql的区别">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Java</span>
+  <h3>Oracle和Mysql的区别</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#oracle"><span class="toc-number">1.</span> <span class="toc-text"> Oracle</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%97%B6%E7%9A%84%E5%9D%91"><span class="toc-number">2.</span> <span class="toc-text"> 安装时的坑</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%8F%8A%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text"> 下载及安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#downloads"><span class="toc-number">3.1.</span> <span class="toc-text"> Downloads</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#install"><span class="toc-number">3.2.</span> <span class="toc-text"> Install</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2023/03/01/Dubbo-Study/" rel="bookmark" title="Dubbo Study">Dubbo Study</a></li><li><a href="/2023/03/02/Tomcat-Nginx-Service-Registry/" rel="bookmark" title="Tomcat And Nginx 服务注册">Tomcat And Nginx 服务注册</a></li><li><a href="/2023/03/07/BS-Transfer-CS/" rel="bookmark" title="B/S项目调用C/S项目并嵌套页面">B/S项目调用C/S项目并嵌套页面</a></li><li><a href="/2023/03/08/Mysql-Install/" rel="bookmark" title="Mysql Install">Mysql Install</a></li><li class="active"><a href="/2023/03/13/Oracle-Install/" rel="bookmark" title="Oracle Install">Oracle Install</a></li><li><a href="/2023/03/16/Oracle-And-Mysql/" rel="bookmark" title="Oracle和Mysql的区别">Oracle和Mysql的区别</a></li><li><a href="/2023/03/21/Tomcat/" rel="bookmark" title="Tomcat谈一谈">Tomcat谈一谈</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="YangKeCheng"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">YangKeCheng</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">9</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lhbmdrZWNoZW5n" title="https:&#x2F;&#x2F;github.com&#x2F;yangkecheng"><i class="ic i-github"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9ib3ktNi01Ny03NA==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;boy-6-57-74"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTE1MjcwMjU0NDE=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;1527025441"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vNzQzNDY0OTM0OS9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="https:&#x2F;&#x2F;weibo.com&#x2F;7434649349&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo&amp;is_all&#x3D;1"><i class="ic i-weibo"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/03/08/Mysql-Install/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/03/16/Oracle-And-Mysql/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/19/Nvm-good/" title="NVM 香香的">NVM 香香的</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/01/Dubbo-Study/" title="Dubbo Study">Dubbo Study</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/13/Oracle-Install/" title="Oracle Install">Oracle Install</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/07/BS-Transfer-CS/" title="B&#x2F;S项目调用C&#x2F;S项目并嵌套页面">B/S项目调用C/S项目并嵌套页面</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/08/Mysql-Install/" title="Mysql Install">Mysql Install</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/21/Tomcat/" title="Tomcat谈一谈">Tomcat谈一谈</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/02/Tomcat-Nginx-Service-Registry/" title="Tomcat And Nginx 服务注册">Tomcat And Nginx 服务注册</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/16/Oracle-And-Mysql/" title="Oracle和Mysql的区别">Oracle和Mysql的区别</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/life/" title="分类于 life">life</a>
+</div>
+
+    <span><a href="/2023/02/28/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">YangKeCheng @ YangKc Blog</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/03/13/Oracle-Install/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,copy_tex: true,
+    katex: true,mermaid: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',quiz: {
+      choice: "单选题",
+      multiple: "多选题",
+      true_false: "判断题",
+      essay: "问答题",
+      gap_fill: "填空题",
+      mistake: "错题备注"
+    },
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.1.1"></script>
+
+
+
+
+</body>
+</html>
