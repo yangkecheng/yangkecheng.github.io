@@ -156,29 +156,29 @@ YangKc Blog = 请相信,这个世界真的有人过着你想要的生活</title>
 <p>Mysql 的官网提供了两种安装方式 <span class="exturl" data-url="aHR0cHM6Ly9kZXYubXlzcWwuY29tL2Rvd25sb2Fkcy9pbnN0YWxsZXIv">下载地址</span><br>
 第一种：在线版安装 (联网安装，安装时设备必须能够访问互联网)<br>
  第二种：离线版安装 (离线安装，下载离线安装包进行离线安装)<br>
-<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/mysql/mysql01.png" alt="在这里插入图片描述"><br>
+<img data-src="../../../..//img/mysql/mysql01.png" alt="在这里插入图片描述"><br>
 感兴趣的同学可以体验一下上面两种安装方式，因为博主一向不喜欢按常理出牌所以推荐第三种方案 <span class="exturl" data-url="aHR0cHM6Ly9kZXYubXlzcWwuY29tL2Rvd25sb2Fkcy9teXNxbC81LjUuaHRtbCNkb3dubG9hZHM=">下载地址</span><br>
 下载已经安装好的压缩包进行配置，这样的成功率及高并且很快，能加快我们写 bug 的进度。<br>
-<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/mysql/mysql02.png" alt="在这里插入图片描述"></p>
+<img data-src="../../../..//img/mysql/mysql02.png" alt="在这里插入图片描述"></p>
 <h2 id="install"><a class="markdownIt-Anchor" href="#install">#</a> Install</h2>
 <p>首先把下载的文件解压到你要安装的目录下<br>
-<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/mysql/mysql03.png" alt="在这里插入图片描述"><br>
+<img data-src="../../../..//img/mysql/mysql03.png" alt="在这里插入图片描述"><br>
 在文件中创建一个名为 my 的.ini 的文件，并将以下内容粘贴进去<br>
 切记将 basedir 路径改成你对应的路径</p>
 <figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>[mysql]</pre></td></tr><tr><td data-num="2"></td><td><pre># 设置 mysql 客户端默认字符集</pre></td></tr><tr><td data-num="3"></td><td><pre>default-character-set&#x3D;utf8</pre></td></tr><tr><td data-num="4"></td><td><pre>[mysqld]</pre></td></tr><tr><td data-num="5"></td><td><pre># 设置 3306 端口</pre></td></tr><tr><td data-num="6"></td><td><pre>port &#x3D; 3306</pre></td></tr><tr><td data-num="7"></td><td><pre># 设置 mysql 的安装目录</pre></td></tr><tr><td data-num="8"></td><td><pre>basedir &#x3D; E:\\Program Files\\mysql\\mysql-8.0.32-winx64</pre></td></tr><tr><td data-num="9"></td><td><pre># 设置 mysql 数据库的数据的存放目录</pre></td></tr><tr><td data-num="10"></td><td><pre>datadir &#x3D; E:\\Program Files\\mysql\\mysql-8.0.32-winx64\\data</pre></td></tr><tr><td data-num="11"></td><td><pre># 允许最大连接数</pre></td></tr><tr><td data-num="12"></td><td><pre>max_connections&#x3D;20</pre></td></tr><tr><td data-num="13"></td><td><pre># 服务端使用的字符集默认为 8 比特编码的 latin1 字符集</pre></td></tr><tr><td data-num="14"></td><td><pre>character-set-server&#x3D;utf8</pre></td></tr><tr><td data-num="15"></td><td><pre># 创建新表时将使用的默认存储引擎</pre></td></tr><tr><td data-num="16"></td><td><pre>default-storage-engine&#x3D;INNODB</pre></td></tr><tr><td data-num="17"></td><td><pre># 创建模式</pre></td></tr><tr><td data-num="18"></td><td><pre>sql_mode &#x3D; NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES</pre></td></tr></table></figure><h2 id="环境变量"><a class="markdownIt-Anchor" href="#环境变量">#</a> 环境变量</h2>
 <p>然后就是给 mysql 配置环境变量，在系统变量中双击 Path，新建环境变量具体如下提所示：<br>
-<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/mysql/mysql04.png" alt="在这里插入图片描述"></p>
+<img data-src="../../../..//img/mysql/mysql04.png" alt="在这里插入图片描述"></p>
 <h2 id="初始化mysql"><a class="markdownIt-Anchor" href="#初始化mysql">#</a> 初始化 Mysql</h2>
 <p>环境变量配置完成以后我们进行初始化 mysql 数据库</p>
 <figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>E:\Program Files\mysql\mysql-8.0.32-winx64&gt;mysqld --install</pre></td></tr><tr><td data-num="2"></td><td><pre>以下为成功的提示信息，如果失败请检查 my.ini 中你的路径是否配置正确</pre></td></tr><tr><td data-num="3"></td><td><pre>Service successfully installed.</pre></td></tr></table></figure><p>mysql 初始化完成以后会生成一个 data 文件，在 data 文件中会有一个 WIN-UOKGH2GH01M.err .err 结尾的文件，里面有 mysql 初始化的账户和密码，在这个文件中更改密码是无效的，后面会有操作进行修改<br>
-<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/mysql/mysql05.png" alt="在这里插入图片描述"></p>
+<img data-src="../../../..//img/mysql/mysql05.png" alt="在这里插入图片描述"></p>
 <h2 id="启动服务"><a class="markdownIt-Anchor" href="#启动服务">#</a> 启动服务</h2>
 <p>在 mysql 安装包中进入 cmd 指令框，启动 mysql 服务。</p>
 <figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>E:\Program Files\mysql\mysql-8.0.32-winx64&gt;net start mysql</pre></td></tr><tr><td data-num="2"></td><td><pre>MySQL 服务正在启动 .</pre></td></tr><tr><td data-num="3"></td><td><pre>MySQL 服务已经启动成功。</pre></td></tr><tr><td data-num="4"></td><td><pre>E:\Program Files\mysql\mysql-8.0.32-winx64&gt;</pre></td></tr></table></figure><p>然后输入用户名密码进行连接 mysql -uroot -pi#/*Lmh8IljT<br>
 root 为你的初始化账户   i#/*Lmh8IljT 为你的初始化密码</p>
 <figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>E:\Program Files\mysql\mysql-8.0.32-winx64&gt;mysql -uroot -pi#&#x2F;*Lmh8IljT</pre></td></tr><tr><td data-num="2"></td><td><pre>mysql: [Warning] Using a password on the command line interface can be insecure.</pre></td></tr><tr><td data-num="3"></td><td><pre>Welcome to the MySQL monitor.  Commands end with ; or \g.</pre></td></tr><tr><td data-num="4"></td><td><pre>Your MySQL connection id is 10</pre></td></tr><tr><td data-num="5"></td><td><pre>Server version: 8.0.32</pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre>Copyright (c) 2000, 2023, Oracle and&#x2F;or its aff&#96;&#96;iliates.</pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre>Oracle is a registered trademark of Oracle Corporation and&#x2F;or its</pre></td></tr><tr><td data-num="10"></td><td><pre>affiliates. Other names may be trademarks of their respective</pre></td></tr><tr><td data-num="11"></td><td><pre>owners.</pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre>Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.</pre></td></tr><tr><td data-num="14"></td><td><pre></pre></td></tr><tr><td data-num="15"></td><td><pre>mysql&gt;</pre></td></tr></table></figure><p>连接成功以后我们就可以进行密码的修改了 <code>alter user 'root'@'localhost' identified with mysql_native_password by 'root';</code>  root 为我要修改成的密码，切记后面的 <code>;</code>  也要加上。</p>
 <figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>mysql&gt; alter user &#39;root&#39;@&#39;localhost&#39; identified with mysql_native_password by &#39;root&#39;;</pre></td></tr><tr><td data-num="2"></td><td><pre>Query OK, 0 rows affected (0.01 sec)</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>mysql&gt;</pre></td></tr></table></figure><p>成功以后我们就可以使用客户端进行连接了，mysql 默认的端口号 3306，我这里就不在给大家展示了，如果有什么问题请按照流程再看一遍是不是有什么漏掉的，或者说之前的 mysql 没有卸载干净。<br>
-<img data-src="http://rshecpthw.hb-bkt.clouddn.com/img/mysql/mysql06.png" alt="在这里插入图片描述"></p>
+<img data-src="../../../..//img/mysql/mysql06.png" alt="在这里插入图片描述"></p>
 
   </div>
 
@@ -190,7 +190,7 @@ root 为你的初始化账户   i#/*Lmh8IljT 为你的初始化密码</p>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2023-04-02 20:48:30" itemprop="dateModified" datetime="2023-04-02T20:48:30+08:00">2023-04-02</time>
+    <time title="修改时间：2023-04-02 21:05:37" itemprop="dateModified" datetime="2023-04-02T21:05:37+08:00">2023-04-02</time>
   </span>
 </div>
 
@@ -350,46 +350,7 @@ root 为你的初始化账户   i#/*Lmh8IljT 为你的初始化密码</p>
 <a href="/categories/Java/" title="分类于 Java">Java</a>
 </div>
 
-    <span><a href="/2023/03/02/Tomcat-Nginx-Service-Registry/" title="Tomcat And Nginx 服务注册">Tomcat And Nginx 服务注册</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Java/" title="分类于 Java">Java</a>
-</div>
-
-    <span><a href="/2023/03/13/Oracle-Install/" title="Oracle Install">Oracle Install</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/03/19/Nvm-good/" title="NVM 香香的">NVM 香香的</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Java/" title="分类于 Java">Java</a>
-</div>
-
-    <span><a href="/2023/03/07/BS-Transfer-CS/" title="B&#x2F;S项目调用C&#x2F;S项目并嵌套页面">B/S项目调用C/S项目并嵌套页面</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Java/" title="分类于 Java">Java</a>
-</div>
-
-    <span><a href="/2023/03/16/Oracle-And-Mysql/" title="Oracle和Mysql的区别">Oracle和Mysql的区别</a></span>
+    <span><a href="/2023/03/08/Mysql-Install/" title="Mysql Install">Mysql Install</a></span>
   </li>
 
       
@@ -409,7 +370,56 @@ root 为你的初始化账户   i#/*Lmh8IljT 为你的初始化密码</p>
 <a href="/categories/Java/" title="分类于 Java">Java</a>
 </div>
 
+    <span><a href="/2023/03/13/Oracle-Install/" title="Oracle Install">Oracle Install</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/02/Tomcat-Nginx-Service-Registry/" title="Tomcat And Nginx 服务注册">Tomcat And Nginx 服务注册</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/16/Oracle-And-Mysql/" title="Oracle和Mysql的区别">Oracle和Mysql的区别</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/07/BS-Transfer-CS/" title="B&#x2F;S项目调用C&#x2F;S项目并嵌套页面">B/S项目调用C/S项目并嵌套页面</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
     <span><a href="/2023/03/01/Dubbo-Study/" title="Dubbo Study">Dubbo Study</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/19/Nvm-good/" title="NVM 香香的">NVM 香香的</a></span>
   </li>
 
       
@@ -420,16 +430,6 @@ root 为你的初始化账户   i#/*Lmh8IljT 为你的初始化密码</p>
 </div>
 
     <span><a href="/2023/03/21/Tomcat/" title="Tomcat谈一谈">Tomcat谈一谈</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Java/" title="分类于 Java">Java</a>
-</div>
-
-    <span><a href="/2023/03/08/Mysql-Install/" title="Mysql Install">Mysql Install</a></span>
   </li>
 
   </ul>
