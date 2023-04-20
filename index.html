@@ -1,348 +1,697 @@
-<!doctype html>
-<html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<title>welcome</title>
-<script src="static/js/jquery-1.10.2.js"></script>
-<link rel="stylesheet" href="./style.css">
-<link href="https://fonts.googleapis.com/css?family=Teko:700&display=swap" rel="stylesheet">
-</head>
-<body>
-<script src="static/js/dat.gui.min.js"></script>
-<script src="static/js/pixi.js"></script>
-<h1 onclick="herfFun()">
-	<span class='one'>w</span>
-	<span class='two'>e</span>
-	<span class='three'>l</span>
-	<span class='four'>c</span> 
-	<span class='five'>o</span>
-	<span class='six'>m</span>
-	<span class='six'>e</span>
-</h1>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-<script>
-function herfFun(){
-	location.replace("http://123.57.59.223/");
-}
-(function() {
-  var AUDIO_URL, TOTAL_BANDS, analyser, analyserDataArray, arrCircles, audio, build, buildCircles, canplay, changeMode, changeTheme, circlesContainer, cp, createCircleTex, gui, hammertime, init, initAudio, initGUI, initGestures, isPlaying, k, message, modes, mousePt, mouseX, mouseY, params, play, renderer, resize, stage, startAnimation, texCircle, themes, themesNames, update, v, windowH, windowW;
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
 
-  AUDIO_URL = "";//mp3文件路径
 
-  modes = ["cubic", "conic"];
+<link rel="alternate" type="application/rss+xml" title="请相信,这个世界真的有人过着你想要的生活" href="https://yangkecheng.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="请相信,这个世界真的有人过着你想要的生活" href="https://yangkecheng.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="请相信,这个世界真的有人过着你想要的生活" href="https://yangkecheng.github.io/feed.json" />
 
-  themes = {
-    pinkBlue: [0xFF0032, 0xFF5C00, 0x00FFB8, 0x53FF00],
-    yellowGreen: [0xF7F6AF, 0x9BD6A3, 0x4E8264, 0x1C2124, 0xD62822],
-    yellowRed: [0xECD078, 0xD95B43, 0xC02942, 0x542437, 0x53777A],
-    blueGray: [0x343838, 0x005F6B, 0x008C9E, 0x00B4CC, 0x00DFFC],
-    blackWhite: [0xFFFFFF, 0x000000, 0xFFFFFF, 0x000000, 0xFFFFFF]
-  };
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-  themesNames = [];
+<link rel="stylesheet" href="/css/app.css?v=0.1.1">
 
-  for (k in themes) {
-    v = themes[k];
-    themesNames.push(k);
-  }
+  
+  <meta name="keywords" content="关键词1,关键词2" />
 
-  // PARAMETERS
-  params = {
-    // public
-    mode: modes[0],
-    theme: themesNames[0],
-    radius: 3,
-    distance: 600,
-    size: .5,
-    // private
-    numParticles: 5000,
-    sizeW: 1,
-    sizeH: 1,
-    radiusParticle: 60,
-    themeArr: themes[this.theme]
-  };
 
-  TOTAL_BANDS = 256;
+<link rel="canonical" href="https://yangkecheng.github.io/">
 
-  cp = new PIXI.Point();
 
-  mouseX = 0;
 
-  mouseY = 0;
+  <title>YangKc Blog = 请相信,这个世界真的有人过着你想要的生活</title>
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+            <a href="/" class="logo" rel="start"><p class="artboard">YangKc Blog</p>
+              <h1 itemprop="name headline" class="title">请相信,这个世界真的有人过着你想要的生活</h1>
+            </a>
+          
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">YangKc Blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-  mousePt = new PIXI.Point();
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="/img/bg.jpg"></li>
+          <li class="item" data-background-image="/img/bg.jpg"></li>
+          <li class="item" data-background-image="/img/bg.jpg"></li>
+          <li class="item" data-background-image="/img/bg.jpg"></li>
+          <li class="item" data-background-image="/img/bg.jpg"></li>
+          <li class="item" data-background-image="/img/bg.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="index wrap">
+      <h2 class="divider">精选分类</h2>
+      <div class="cards">
+          
+<section class="item">
+  <div class="cover" data-background-image="/Java/cover.jpg">
+    <h2 class="title">Java</h2>
+  </div>
+  <div class="info">
+    <div class="ribbon"><a href="/categories/Java/" itemprop="url" title="Java">Java</a></div>
+    <div class="inner">
+        <ul class="posts">
+            <li><a title="B/S项目调用C/S项目并嵌套页面" href="/2023/03/07/BS-Transfer-CS/">B/S项目调用C/S项目并嵌套页面</a></li>
+            <li><a title="Dubbo Study" href="/2023/03/01/Dubbo-Study/">Dubbo Study</a></li>
+            <li><a title="Mysql Install" href="/2023/03/08/Mysql-Install/">Mysql Install</a></li>
+            <li><a title="Oracle Install" href="/2023/03/13/Oracle-Install/">Oracle Install</a></li>
+            <li><a title="Oracle和Mysql的区别" href="/2023/03/16/Oracle-And-Mysql/">Oracle和Mysql的区别</a></li>
+            <li><a title="Tomcat And Nginx 服务注册" href="/2023/03/02/Tomcat-Nginx-Service-Registry/">Tomcat And Nginx 服务注册</a></li>
+        </ul>
+        <div class="meta footer">
+          <span>
+            <i class="ic i-file"></i>7 篇文章
+          </span>
+        </div>
+        <a href="/categories/Java/" itemprop="url" title="Java" class="btn">more...</a>
+    </div>
+  </div>
+</section>
 
-  windowW = 0;
+      </div>
+    <h2 class="divider">文章列表</h2>
+    <div class="segments posts">
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/03/21/Tomcat/" itemprop="url" title="Tomcat谈一谈"><img data-src="/img/Tomcat.png"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-21 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-21T00:00:00+08:00">2023-03-21</time>
+  </span>
+</div>
 
-  windowH = 0;
+    <h3><a href="/2023/03/21/Tomcat/" itemprop="url" title="Tomcat谈一谈">Tomcat谈一谈</a></h3>
+    <div class="excerpt">
+        💡 最近项目上 Tomcat 遇到的问题比较多，所以该花点时间学习学习啦。
 
-  stage = null;
+# Tomcat
+Tomacat 是由 Apache 推出的一款免费开源的 Servlet 容器，可实现 JavaWeb 程序的装载，是配置 JSP（Java Server Page）和 JAVA 系统必备的一款环境。它是 apache 软件基金会的 jakarta 项目中的一个核心项目，因为 tomcat 技术先进性能稳定和监督易用性已成为最为广泛的 jsp 服务器。
+因为 Tomcat 服务器是一个免费的开放源代码的 Web...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/Java/" itemprop="url" title="Java"><i class="ic i-flag"></i>Java</a>
+      </span>
+    </div>
+    <a href="/2023/03/21/Tomcat/" itemprop="url" title="Tomcat谈一谈" class="btn">more...</a>
+  </div>
+</article>
 
-  renderer = null;
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/03/19/Nvm-good/" itemprop="url" title="NVM 香香的"><img data-src="/img/bg.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-19 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-19T00:00:00+08:00">2023-03-19</time>
+  </span>
+</div>
 
-  texCircle = null;
+    <h3><a href="/2023/03/19/Nvm-good/" itemprop="url" title="NVM 香香的">NVM 香香的</a></h3>
+    <div class="excerpt">
+        👉 由于要在电脑上写一 Demo，找了个前后台分离的开源项目运行，但是这个项目前端是 vue3 的和我另一个 vue2 的项目 node 版本上有些冲突
+vue2 项目的 node 版本是 12，vue3 项目在 node 12v 版本下运行不了，要求最低 14v。一开始我还是卸载 12v 去装 18v 但是有些麻烦于是就用 nvm 去控制 node 版本感觉很香。
 
-  circlesContainer = null;
+电脑上有 node.js 的话也不用卸载。安装完成以后他会自动将你已经安装好的 node 检测出来
+nvm 下载地址 选择 nvm-setup.zip...
+    </div>
+    <a href="/2023/03/19/Nvm-good/" itemprop="url" title="NVM 香香的" class="btn">more...</a>
+  </div>
+</article>
 
-  arrCircles = [];
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/03/16/Oracle-And-Mysql/" itemprop="url" title="Oracle和Mysql的区别"><img data-src="/img/mysqlAndOracle.png"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-16 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-16T00:00:00+08:00">2023-03-16</time>
+  </span>
+</div>
 
-  hammertime = null;
+    <h3><a href="/2023/03/16/Oracle-And-Mysql/" itemprop="url" title="Oracle和Mysql的区别">Oracle和Mysql的区别</a></h3>
+    <div class="excerpt">
+        💡 Oracle、Mysql 当今最火热的两个关系型数据库的区别？
 
-  message = null;
+Oracle 和 Mysql 如今都属于甲骨文公司旗下的数据库，他们都是当前比较流行的关系型数据库应用于各种平台
+# 各自适用场景
+Mysql 属于轻量级的数据库小巧，免费，对硬件的要求很低，安装使用快捷方便。
+Oracle 这属于重量级的数据库，收费，对硬件的要求有些高，能够支撑很多单节点或者集群的环境。
+目前很多互联网公司都会选择 Oracle，因为 Oracle 能够支持大并发、大访问量，对大型项目能够做到很好的支撑。
+最重要的就是 Oracle 足够安全，Mysql 对安全的验证只有三种 账户 密码 位置 而...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/Java/" itemprop="url" title="Java"><i class="ic i-flag"></i>Java</a>
+      </span>
+    </div>
+    <a href="/2023/03/16/Oracle-And-Mysql/" itemprop="url" title="Oracle和Mysql的区别" class="btn">more...</a>
+  </div>
+</article>
 
-  // audio
-  audio = null;
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/03/13/Oracle-Install/" itemprop="url" title="Oracle Install"><img data-src="/img/oracle.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-13 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-13T00:00:00+08:00">2023-03-13</time>
+  </span>
+</div>
 
-  analyser = null;
+    <h3><a href="/2023/03/13/Oracle-Install/" itemprop="url" title="Oracle Install">Oracle Install</a></h3>
+    <div class="excerpt">
+        💡 java 环境配置系列，Oracle 详解及安装配置。
 
-  analyserDataArray = null;
+# Oracle
+Oracle 当今使用最广泛最流行的关系型数据库，由甲骨文公司开发、运营与维护。
+在数据库领域中一直处于领先地位，系统可移植性好、使用方便、功能与性能强大、效率高，适用于大、中、小软件开发。放眼当下因高效率（适应高吞吐量）、可靠性好仍是开发商业软件最好的选择（就是要钱还贵）。
+# 安装时的坑
+前几天在安装的时候在第九步的时候出现的问题
+导致安装完以后 sys 的默认密码登录不进去 原因是因为 在给所有账户设置默认口令的时候输入的是 ROOT 不符合 Oracle 的建议标准
+Oracle 就会 sys...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/Java/" itemprop="url" title="Java"><i class="ic i-flag"></i>Java</a>
+      </span>
+    </div>
+    <a href="/2023/03/13/Oracle-Install/" itemprop="url" title="Oracle Install" class="btn">more...</a>
+  </div>
+</article>
 
-  isPlaying = false;
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/03/08/Mysql-Install/" itemprop="url" title="Mysql Install"><img data-src="/img/mysql.png"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-08 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-08T00:00:00+08:00">2023-03-08</time>
+  </span>
+</div>
 
-  canplay = false;
+    <h3><a href="/2023/03/08/Mysql-Install/" itemprop="url" title="Mysql Install">Mysql Install</a></h3>
+    <div class="excerpt">
+        💡 java 环境配置系列，Mysql 详解及安装配置。
 
-  // gui
-  gui = null;
+# MySQL
+开源免费的数据库，小型的数据库。目前已经被 Oracle 收购了，MySQL6.x 版本也已经开始收费。
+# 下载及安装
+# Downloads
+Mysql 的官网提供了两种安装方式 下载地址
+第一种：在线版安装 (联网安装，安装时设备必须能够访问互联网)
+第二种：离线版安装 (离线安装，下载离线安装包进行离线安装)
 
-  init = function() {
-    initGestures();
-    message = $(".message");
-    message.on("click", play);
-    resize();
-    build();
-    resize();
-    mousePt.x = cp.x;
-    mousePt.y = cp.y;
-    $(window).resize(resize);
-    startAnimation();
-    return initGUI();
-  };
+感兴趣的同学可以体验一下上面两种安装方式，因为博主一向不喜欢按常理出牌所以推荐第三种方案 下载地址
+下载已经安装好的压缩包进行配置，这样的成功率及高并且很快，能加快我们写 bug 的进度。
 
-  play = function() {
-    if (isPlaying) {
-      return;
-    }
-    initAudio();
-    message.css("cursor", "default");
-    if (canplay) {
-      message.hide();
-    } else {
-      message.html("LOADING MUSIC...");
-    }
-    audio.play();
-    return isPlaying = true;
-  };
+#...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/Java/" itemprop="url" title="Java"><i class="ic i-flag"></i>Java</a>
+      </span>
+    </div>
+    <a href="/2023/03/08/Mysql-Install/" itemprop="url" title="Mysql Install" class="btn">more...</a>
+  </div>
+</article>
 
-  initGUI = function() {
-    var modeController, sizeController, themeController;
-    gui = new dat.GUI();
-    // if window.innerWidth < 500
-    gui.close();
-    modeController = gui.add(params, 'mode', modes);
-    modeController.onChange(function(value) {
-      return changeMode(value);
-    });
-    themeController = gui.add(params, 'theme', themesNames);
-    themeController.onChange(function(value) {
-      return changeTheme(params.theme);
-    });
-    gui.add(params, 'radius', 1, 8);
-    gui.add(params, 'distance', 100, 1000);
-    sizeController = gui.add(params, 'size', 0, 1);
-    return sizeController.onChange(function(value) {
-      return resize(value);
-    });
-  };
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/03/07/BS-Transfer-CS/" itemprop="url" title="B&#x2F;S项目调用C&#x2F;S项目并嵌套页面"><img data-src="/img/bg.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-07 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-07T00:00:00+08:00">2023-03-07</time>
+  </span>
+</div>
 
-  initAudio = function() {
-    var context, source;
-    context = new (window.AudioContext || window.webkitAudioContext)();
-    analyser = context.createAnalyser();
-    //   analyser.smoothingTimeConstant = 0.5
-    source = null;
-    audio = new Audio();
-    audio.crossOrigin = "anonymous";
-    audio.src = AUDIO_URL;
-    return audio.addEventListener('canplay', function() {
-      var bufferLength;
-      if (isPlaying) {
-        message.hide();
+    <h3><a href="/2023/03/07/BS-Transfer-CS/" itemprop="url" title="B&#x2F;S项目调用C&#x2F;S项目并嵌套页面">B/S项目调用C/S项目并嵌套页面</a></h3>
+    <div class="excerpt">
+        在给予 java 的 B/S 项目中实现调用 c#.net 的 C/S 项目，并将 C/S 的页面嵌套在 B/S 中进行展示。
+方法一：在 C/S 项目中嵌套 WebBrowser 控件将页面托管到特定 URL，然后在 B/S 进行对 URL 的嵌套调用。
+方法二：在 B/S 项目调用 C# 编写的.exe 程序，弹出相应的页面。
+
+# WebBrowser 控件
+WebBrowser 控件为 WebBrowser ActiveX 控件提供了托管包装器。 托管包装器可在 Windows 窗体客户端应用程序中显示网页。 你可以使用 WebBrowser 控件在应用程序中复制 Internet...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/Java/" itemprop="url" title="Java"><i class="ic i-flag"></i>Java</a>
+      </span>
+    </div>
+    <a href="/2023/03/07/BS-Transfer-CS/" itemprop="url" title="B&#x2F;S项目调用C&#x2F;S项目并嵌套页面" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/03/02/Tomcat-Nginx-Service-Registry/" itemprop="url" title="Tomcat And Nginx 服务注册"><img data-src="/img/bg.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-02 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-02T00:00:00+08:00">2023-03-02</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/03/02/Tomcat-Nginx-Service-Registry/" itemprop="url" title="Tomcat And Nginx 服务注册">Tomcat And Nginx 服务注册</a></h3>
+    <div class="excerpt">
+        记一个需求：
+前后端分离的项目 String Boot + Vue 初始部署在 97 服务上，使用 Tomcat+Nginx 进行部署
+还有一个 98 的服务器 他们有一个共享盘，如果 97 服务挂掉的话 98 服务就会自启并可以读取到这个盘
+需要在 98 上将 Tomcat 和 Nginx 进行服务注册，这样 97 挂掉的时候 98 的服务就可以把服务自启动
+97 和 98 有一个前置的 Nginx 对外提供 101 IP 进行访问
+
+# Tomecat 服务注册
+首先 cd 到 Tomcat 的 bin 目录下，有一个 service.bat 的批处理文件，这个文件就是为我们将...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/Java/" itemprop="url" title="Java"><i class="ic i-flag"></i>Java</a>
+      </span>
+    </div>
+    <a href="/2023/03/02/Tomcat-Nginx-Service-Registry/" itemprop="url" title="Tomcat And Nginx 服务注册" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/03/01/Dubbo-Study/" itemprop="url" title="Dubbo Study"><img data-src="/img/dubble.png"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-01 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-01T00:00:00+08:00">2023-03-01</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/03/01/Dubbo-Study/" itemprop="url" title="Dubbo Study">Dubbo Study</a></h3>
+    <div class="excerpt">
+        这篇文章转载自我在 CSDN 上的总结《Dubbo 学习笔记》。
+
+# 分布式简要说明
+Dubbo 是用于分布式系统的框架所以我们要先了解什么是分布式
+分布式系统是若干独立 计算机的集合，这些计算机对于用户来说就像单个相关系统。
+老式系统 (单一应用架构) 就是把一个系统，统一放到一个服务器当中然后每一个服务器上放一个系统，如果说要更新代码的话，每一个服务器上的系统都要重新去部署十分的麻烦。
+而分布式系统就是将一个完整的系统拆分成多个不同的服务，然后在将每一个服务单独的放到一个服务器当中。(三个臭皮匠赛过诸葛亮)
+#...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/Java/" itemprop="url" title="Java"><i class="ic i-flag"></i>Java</a>
+      </span>
+    </div>
+    <a href="/2023/03/01/Dubbo-Study/" itemprop="url" title="Dubbo Study" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/02/28/hello-world/" itemprop="url" title="Hello World"><img data-src="/img/bg.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-02-28 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-28T00:00:00+08:00">2023-02-28</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/02/28/hello-world/" itemprop="url" title="Hello World">Hello World</a></h3>
+    <div class="excerpt">
+        # This is a Hello World
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/life/" itemprop="url" title="life"><i class="ic i-flag"></i>life</a>
+      </span>
+    </div>
+    <a href="/2023/02/28/hello-world/" itemprop="url" title="Hello World" class="btn">more...</a>
+  </div>
+</article>
+
+    </div>
+
+  </div>
+
+  
+
+
+
+        </div>
+        <div id="sidebar">
+          
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="YangKeCheng"
+      data-src="/images/tx.jpg">
+  <p class="name" itemprop="name">YangKeCheng</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">9</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lhbmdrZWNoZW5n" title="https:&#x2F;&#x2F;github.com&#x2F;yangkecheng"><i class="ic i-github"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9ib3ktNi01Ny03NA==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;boy-6-57-74"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTE1MjcwMjU0NDE=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;1527025441"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vNzQzNDY0OTM0OS9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="https:&#x2F;&#x2F;weibo.com&#x2F;7434649349&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo&amp;is_all&#x3D;1"><i class="ic i-weibo"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/life/" title="分类于 life">life</a>
+</div>
+
+    <span><a href="/2023/02/28/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/19/Nvm-good/" title="NVM 香香的">NVM 香香的</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/02/Tomcat-Nginx-Service-Registry/" title="Tomcat And Nginx 服务注册">Tomcat And Nginx 服务注册</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/21/Tomcat/" title="Tomcat谈一谈">Tomcat谈一谈</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/16/Oracle-And-Mysql/" title="Oracle和Mysql的区别">Oracle和Mysql的区别</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/13/Oracle-Install/" title="Oracle Install">Oracle Install</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/08/Mysql-Install/" title="Mysql Install">Mysql Install</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/01/Dubbo-Study/" title="Dubbo Study">Dubbo Study</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/07/BS-Transfer-CS/" title="B&#x2F;S项目调用C&#x2F;S项目并嵌套页面">B/S项目调用C/S项目并嵌套页面</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">YangKeCheng @ YangKc Blog</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
       }
-      canplay = true;
-      source = context.createMediaElementSource(audio);
-      source.connect(analyser);
-      source.connect(context.destination);
-      analyser.fftSize = TOTAL_BANDS * 2;
-      bufferLength = analyser.frequencyBinCount;
-      return analyserDataArray = new Uint8Array(bufferLength);
-    });
+    ]
   };
+</script>
 
-  startAnimation = function() {
-    return requestAnimFrame(update);
-  };
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
 
-  initGestures = function() {
-    return $(window).on('mousemove touchmove', function(e) {
-      if (e.type === 'mousemove') {
-        mouseX = e.clientX;
-        return mouseY = e.clientY;
-      } else {
-        mouseX = e.originalEvent.changedTouches[0].clientX;
-        return mouseY = e.originalEvent.changedTouches[0].clientY;
-      }
-    });
-  };
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
 
-  build = function() {
-    stage = new PIXI.Stage(0x000000);
-    renderer = PIXI.autoDetectRenderer({
-      width: $(window).width(),
-      height: $(window).height(),
-      antialias: true,
-      resolution: window.devicePixelRatio
-    });
-    $(document.body).append(renderer.view);
-    texCircle = createCircleTex();
-    return buildCircles();
-  };
+<script src="/js/app.js?v=0.1.1"></script>
 
-  buildCircles = function() {
-    var circle, i, j, ref;
-    circlesContainer = new PIXI.DisplayObjectContainer();
-    stage.addChild(circlesContainer);
-    for (i = j = 0, ref = params.numParticles - 1; (0 <= ref ? j <= ref : j >= ref); i = 0 <= ref ? ++j : --j) {
-      circle = new PIXI.Sprite(texCircle);
-      circle.anchor.x = 0.5;
-      circle.anchor.y = 0.5;
-      circle.position.x = circle.xInit = cp.x;
-      circle.position.y = circle.yInit = cp.y;
-      circle.mouseRad = Math.random();
-      circlesContainer.addChild(circle);
-      arrCircles.push(circle);
-    }
-    return changeTheme(params.theme);
-  };
 
-  createCircleTex = function() {
-    var gCircle;
-    gCircle = new PIXI.Graphics();
-    gCircle.beginFill(0xFFFFFF);
-    gCircle.drawCircle(0, 0, params.radiusParticle);
-    gCircle.endFill();
-    return gCircle.generateTexture();
-  };
 
-  resize = function() {
-    windowW = $(window).width();
-    windowH = $(window).height();
-    cp.x = windowW * .5;
-    cp.y = windowH * .5;
-    params.sizeW = windowH * params.size;
-    params.sizeH = windowH * params.size;
-    changeMode(params.mode);
-    if (renderer) {
-      return renderer.resize(windowW, windowH);
-    }
-  };
-
-  changeTheme = function(name) {
-    var circle, group, i, indexColor, j, padColor, ref, results;
-    params.themeArr = themes[name];
-    indexColor = 0;
-    padColor = Math.ceil(params.numParticles / params.themeArr.length);
-    results = [];
-    for (i = j = 0, ref = params.numParticles - 1; (0 <= ref ? j <= ref : j >= ref); i = 0 <= ref ? ++j : --j) {
-      circle = arrCircles[i];
-      group = indexColor * padColor / params.numParticles;
-      circle.blendMode = params.theme === "blackWhite" ? PIXI.blendModes.NORMAL : PIXI.blendModes.ADD;
-      circle.indexBand = Math.round(group * (TOTAL_BANDS - 56)) - 1;
-      if (circle.indexBand <= 0) {
-        circle.indexBand = 49;
-      }
-      circle.s = (Math.random() + (params.themeArr.length - indexColor) * 0.2) * 0.1;
-      circle.scale = new PIXI.Point(circle.s, circle.s);
-      if (i % padColor === 0) {
-        indexColor++;
-      }
-      results.push(circle.tint = params.themeArr[indexColor - 1]);
-    }
-    return results;
-  };
-
-  changeMode = function(value) {
-    var angle, circle, i, j, ref, results;
-    if (!arrCircles || arrCircles.length === 0) {
-      return;
-    }
-    if (!value) {
-      value = modes[Math.floor(Math.random() * modes.length)];
-    }
-    params.mode = value;
-    results = [];
-    for (i = j = 0, ref = params.numParticles - 1; (0 <= ref ? j <= ref : j >= ref); i = 0 <= ref ? ++j : --j) {
-      circle = arrCircles[i];
-      switch (params.mode) {
-        // cubic
-        case modes[0]:
-          circle.xInit = cp.x + (Math.random() * params.sizeW - params.sizeW / 2);
-          results.push(circle.yInit = cp.y + (Math.random() * params.sizeH - params.sizeH / 2));
-          break;
-        // circular
-        case modes[1]:
-          angle = Math.random() * (Math.PI * 2);
-          circle.xInit = cp.x + (Math.cos(angle) * params.sizeW);
-          results.push(circle.yInit = cp.y + (Math.sin(angle) * params.sizeH));
-          break;
-        default:
-          results.push(void 0);
-      }
-    }
-    return results;
-  };
-
-  update = function() {
-    var a, angle, circle, dist, dx, dy, i, j, n, r, ref, scale, t, xpos, ypos;
-    requestAnimFrame(update);
-    t = performance.now() / 60;
-    if (analyserDataArray && isPlaying) {
-      analyser.getByteFrequencyData(analyserDataArray);
-    }
-    if (mouseX > 0 && mouseY > 0) {
-      mousePt.x += (mouseX - mousePt.x) * 0.03;
-      mousePt.y += (mouseY - mousePt.y) * 0.03;
-    } else {
-      a = t * 0.05;
-      mousePt.x = cp.x + Math.cos(a) * 100;
-      mousePt.y = cp.y + Math.sin(a) * 100;
-    }
-    for (i = j = 0, ref = params.numParticles - 1; (0 <= ref ? j <= ref : j >= ref); i = 0 <= ref ? ++j : --j) {
-      circle = arrCircles[i];
-      if (analyserDataArray && isPlaying) {
-        n = analyserDataArray[circle.indexBand];
-        scale = (n / 256) * circle.s * 2;
-      } else {
-        scale = circle.s * .1;
-      }
-      scale *= params.radius;
-      circle.scale.x += (scale - circle.scale.x) * 0.3;
-      circle.scale.y = circle.scale.x;
-      dx = mousePt.x - circle.xInit;
-      dy = mousePt.y - circle.yInit;
-      dist = Math.sqrt(dx * dx + dy * dy);
-      angle = Math.atan2(dy, dx);
-      r = circle.mouseRad * params.distance + 30;
-      xpos = circle.xInit - Math.cos(angle) * r;
-      ypos = circle.yInit - Math.sin(angle) * r;
-      circle.position.x += (xpos - circle.position.x) * 0.1;
-      circle.position.y += (ypos - circle.position.y) * 0.1;
-    }
-    return renderer.render(stage);
-  };
-
-  init();
-
-}).call(this);</script>
 
 </body>
 </html>

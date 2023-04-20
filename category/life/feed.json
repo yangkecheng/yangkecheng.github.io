@@ -1,0 +1,16 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "请相信,这个世界真的有人过着你想要的生活 • All posts by \"life\" category",
+    "description": "",
+    "home_page_url": "https://yangkecheng.github.io",
+    "items": [
+        {
+            "id": "https://yangkecheng.github.io/2023/02/28/hello-world/",
+            "url": "https://yangkecheng.github.io/2023/02/28/hello-world/",
+            "title": "Hello World",
+            "date_published": "2023-02-27T16:00:00.000Z",
+            "content_html": "<h2 id=\"this-is-a-hello-world\"><a class=\"markdownIt-Anchor\" href=\"#this-is-a-hello-world\">#</a> This is a Hello World</h2>\n",
+            "tags": []
+        }
+    ]
+}

@@ -1,0 +1,504 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="请相信,这个世界真的有人过着你想要的生活" href="https://yangkecheng.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="请相信,这个世界真的有人过着你想要的生活" href="https://yangkecheng.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="请相信,这个世界真的有人过着你想要的生活" href="https://yangkecheng.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.1.1">
+
+  
+  <meta name="keywords" content="关键词1,关键词2" />
+
+
+<link rel="canonical" href="https://yangkecheng.github.io/2023/03/08/Mysql-Install/">
+
+
+
+  <title>
+Mysql Install - Java |
+YangKc Blog = 请相信,这个世界真的有人过着你想要的生活</title>
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Mysql Install
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-08 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-08T00:00:00+08:00">2023-03-08</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">YangKc Blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="/img/mysql.png">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Java/" itemprop="item" rel="index" title="分类于 Java"><span itemprop="name">Java</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://yangkecheng.github.io/2023/03/08/Mysql-Install/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/tx.jpg">
+    <meta itemprop="name" content="YangKeCheng">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="请相信,这个世界真的有人过着你想要的生活">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <div class="note info">
+<p>💡  java 环境配置系列，Mysql 详解及安装配置。</p>
+</div>
+<h1 id="mysql"><a class="markdownIt-Anchor" href="#mysql">#</a> MySQL</h1>
+<p>开源免费的数据库，小型的数据库。目前已经被 Oracle 收购了，MySQL6.x 版本也已经开始收费。</p>
+<h1 id="下载及安装"><a class="markdownIt-Anchor" href="#下载及安装">#</a> 下载及安装</h1>
+<h2 id="downloads"><a class="markdownIt-Anchor" href="#downloads">#</a> Downloads</h2>
+<p>Mysql 的官网提供了两种安装方式 <span class="exturl" data-url="aHR0cHM6Ly9kZXYubXlzcWwuY29tL2Rvd25sb2Fkcy9pbnN0YWxsZXIv">下载地址</span><br>
+第一种：在线版安装 (联网安装，安装时设备必须能够访问互联网)<br>
+ 第二种：离线版安装 (离线安装，下载离线安装包进行离线安装)<br>
+<img data-src="../../../..//img/mysql/mysql01.png" alt="在这里插入图片描述"><br>
+感兴趣的同学可以体验一下上面两种安装方式，因为博主一向不喜欢按常理出牌所以推荐第三种方案 <span class="exturl" data-url="aHR0cHM6Ly9kZXYubXlzcWwuY29tL2Rvd25sb2Fkcy9teXNxbC81LjUuaHRtbCNkb3dubG9hZHM=">下载地址</span><br>
+下载已经安装好的压缩包进行配置，这样的成功率及高并且很快，能加快我们写 bug 的进度。<br>
+<img data-src="../../../..//img/mysql/mysql02.png" alt="在这里插入图片描述"></p>
+<h2 id="install"><a class="markdownIt-Anchor" href="#install">#</a> Install</h2>
+<p>首先把下载的文件解压到你要安装的目录下<br>
+<img data-src="../../../..//img/mysql/mysql03.png" alt="在这里插入图片描述"><br>
+在文件中创建一个名为 my 的.ini 的文件，并将以下内容粘贴进去<br>
+切记将 basedir 路径改成你对应的路径</p>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>[mysql]</pre></td></tr><tr><td data-num="2"></td><td><pre># 设置 mysql 客户端默认字符集</pre></td></tr><tr><td data-num="3"></td><td><pre>default-character-set&#x3D;utf8</pre></td></tr><tr><td data-num="4"></td><td><pre>[mysqld]</pre></td></tr><tr><td data-num="5"></td><td><pre># 设置 3306 端口</pre></td></tr><tr><td data-num="6"></td><td><pre>port &#x3D; 3306</pre></td></tr><tr><td data-num="7"></td><td><pre># 设置 mysql 的安装目录</pre></td></tr><tr><td data-num="8"></td><td><pre>basedir &#x3D; E:\\Program Files\\mysql\\mysql-8.0.32-winx64</pre></td></tr><tr><td data-num="9"></td><td><pre># 设置 mysql 数据库的数据的存放目录</pre></td></tr><tr><td data-num="10"></td><td><pre>datadir &#x3D; E:\\Program Files\\mysql\\mysql-8.0.32-winx64\\data</pre></td></tr><tr><td data-num="11"></td><td><pre># 允许最大连接数</pre></td></tr><tr><td data-num="12"></td><td><pre>max_connections&#x3D;20</pre></td></tr><tr><td data-num="13"></td><td><pre># 服务端使用的字符集默认为 8 比特编码的 latin1 字符集</pre></td></tr><tr><td data-num="14"></td><td><pre>character-set-server&#x3D;utf8</pre></td></tr><tr><td data-num="15"></td><td><pre># 创建新表时将使用的默认存储引擎</pre></td></tr><tr><td data-num="16"></td><td><pre>default-storage-engine&#x3D;INNODB</pre></td></tr><tr><td data-num="17"></td><td><pre># 创建模式</pre></td></tr><tr><td data-num="18"></td><td><pre>sql_mode &#x3D; NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES</pre></td></tr></table></figure><h2 id="环境变量"><a class="markdownIt-Anchor" href="#环境变量">#</a> 环境变量</h2>
+<p>然后就是给 mysql 配置环境变量，在系统变量中双击 Path，新建环境变量具体如下提所示：<br>
+<img data-src="../../../..//img/mysql/mysql04.png" alt="在这里插入图片描述"></p>
+<h2 id="初始化mysql"><a class="markdownIt-Anchor" href="#初始化mysql">#</a> 初始化 Mysql</h2>
+<p>环境变量配置完成以后我们进行初始化 mysql 数据库</p>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>E:\Program Files\mysql\mysql-8.0.32-winx64&gt;mysqld --install</pre></td></tr><tr><td data-num="2"></td><td><pre>以下为成功的提示信息，如果失败请检查 my.ini 中你的路径是否配置正确</pre></td></tr><tr><td data-num="3"></td><td><pre>Service successfully installed.</pre></td></tr></table></figure><p>mysql 初始化完成以后会生成一个 data 文件，在 data 文件中会有一个 WIN-UOKGH2GH01M.err .err 结尾的文件，里面有 mysql 初始化的账户和密码，在这个文件中更改密码是无效的，后面会有操作进行修改<br>
+<img data-src="../../../..//img/mysql/mysql05.png" alt="在这里插入图片描述"></p>
+<h2 id="启动服务"><a class="markdownIt-Anchor" href="#启动服务">#</a> 启动服务</h2>
+<p>在 mysql 安装包中进入 cmd 指令框，启动 mysql 服务。</p>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>E:\Program Files\mysql\mysql-8.0.32-winx64&gt;net start mysql</pre></td></tr><tr><td data-num="2"></td><td><pre>MySQL 服务正在启动 .</pre></td></tr><tr><td data-num="3"></td><td><pre>MySQL 服务已经启动成功。</pre></td></tr><tr><td data-num="4"></td><td><pre>E:\Program Files\mysql\mysql-8.0.32-winx64&gt;</pre></td></tr></table></figure><p>然后输入用户名密码进行连接 mysql -uroot -pi#/*Lmh8IljT<br>
+root 为你的初始化账户   i#/*Lmh8IljT 为你的初始化密码</p>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>E:\Program Files\mysql\mysql-8.0.32-winx64&gt;mysql -uroot -pi#&#x2F;*Lmh8IljT</pre></td></tr><tr><td data-num="2"></td><td><pre>mysql: [Warning] Using a password on the command line interface can be insecure.</pre></td></tr><tr><td data-num="3"></td><td><pre>Welcome to the MySQL monitor.  Commands end with ; or \g.</pre></td></tr><tr><td data-num="4"></td><td><pre>Your MySQL connection id is 10</pre></td></tr><tr><td data-num="5"></td><td><pre>Server version: 8.0.32</pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre>Copyright (c) 2000, 2023, Oracle and&#x2F;or its aff&#96;&#96;iliates.</pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre>Oracle is a registered trademark of Oracle Corporation and&#x2F;or its</pre></td></tr><tr><td data-num="10"></td><td><pre>affiliates. Other names may be trademarks of their respective</pre></td></tr><tr><td data-num="11"></td><td><pre>owners.</pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre>Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.</pre></td></tr><tr><td data-num="14"></td><td><pre></pre></td></tr><tr><td data-num="15"></td><td><pre>mysql&gt;</pre></td></tr></table></figure><p>连接成功以后我们就可以进行密码的修改了 <code>alter user 'root'@'localhost' identified with mysql_native_password by 'root';</code>  root 为我要修改成的密码，切记后面的 <code>;</code>  也要加上。</p>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>mysql&gt; alter user &#39;root&#39;@&#39;localhost&#39; identified with mysql_native_password by &#39;root&#39;;</pre></td></tr><tr><td data-num="2"></td><td><pre>Query OK, 0 rows affected (0.01 sec)</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>mysql&gt;</pre></td></tr></table></figure><p>成功以后我们就可以使用客户端进行连接了，mysql 默认的端口号 3306，我这里就不在给大家展示了，如果有什么问题请按照流程再看一遍是不是有什么漏掉的，或者说之前的 mysql 没有卸载干净。<br>
+<img data-src="../../../..//img/mysql/mysql06.png" alt="在这里插入图片描述"></p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-04-09 20:10:15" itemprop="dateModified" datetime="2023-04-09T20:10:15+08:00">2023-04-09</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>打赏一哈吧~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wx.png" alt="YangKeCheng 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>YangKeCheng <i class="ic i-at"><em>@</em></i>请相信,这个世界真的有人过着你想要的生活
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://yangkecheng.github.io/2023/03/08/Mysql-Install/" title="Mysql Install">https://yangkecheng.github.io/2023/03/08/Mysql-Install/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/03/07/BS-Transfer-CS/" itemprop="url" rel="prev" data-background-image="&#x2F;img&#x2F;bg.jpg" title="B&#x2F;S项目调用C&#x2F;S项目并嵌套页面">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Java</span>
+  <h3>B/S项目调用C/S项目并嵌套页面</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/03/13/Oracle-Install/" itemprop="url" rel="next" data-background-image="&#x2F;img&#x2F;oracle.jpg" title="Oracle Install">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Java</span>
+  <h3>Oracle Install</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#mysql"><span class="toc-number">1.</span> <span class="toc-text"> MySQL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%8F%8A%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text"> 下载及安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#downloads"><span class="toc-number">2.1.</span> <span class="toc-text"> Downloads</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#install"><span class="toc-number">2.2.</span> <span class="toc-text"> Install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">2.3.</span> <span class="toc-text"> 环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96mysql"><span class="toc-number">2.4.</span> <span class="toc-text"> 初始化 Mysql</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.5.</span> <span class="toc-text"> 启动服务</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2023/03/01/Dubbo-Study/" rel="bookmark" title="Dubbo Study">Dubbo Study</a></li><li><a href="/2023/03/02/Tomcat-Nginx-Service-Registry/" rel="bookmark" title="Tomcat And Nginx 服务注册">Tomcat And Nginx 服务注册</a></li><li><a href="/2023/03/07/BS-Transfer-CS/" rel="bookmark" title="B/S项目调用C/S项目并嵌套页面">B/S项目调用C/S项目并嵌套页面</a></li><li class="active"><a href="/2023/03/08/Mysql-Install/" rel="bookmark" title="Mysql Install">Mysql Install</a></li><li><a href="/2023/03/13/Oracle-Install/" rel="bookmark" title="Oracle Install">Oracle Install</a></li><li><a href="/2023/03/16/Oracle-And-Mysql/" rel="bookmark" title="Oracle和Mysql的区别">Oracle和Mysql的区别</a></li><li><a href="/2023/03/21/Tomcat/" rel="bookmark" title="Tomcat谈一谈">Tomcat谈一谈</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="YangKeCheng"
+      data-src="/images/tx.jpg">
+  <p class="name" itemprop="name">YangKeCheng</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">9</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lhbmdrZWNoZW5n" title="https:&#x2F;&#x2F;github.com&#x2F;yangkecheng"><i class="ic i-github"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9ib3ktNi01Ny03NA==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;boy-6-57-74"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTE1MjcwMjU0NDE=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;1527025441"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vNzQzNDY0OTM0OS9wcm9maWxlP3JpZ2h0bW9kPTEmd3ZyPTYmbW9kPXBlcnNvbmluZm8maXNfYWxsPTE=" title="https:&#x2F;&#x2F;weibo.com&#x2F;7434649349&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo&amp;is_all&#x3D;1"><i class="ic i-weibo"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/03/07/BS-Transfer-CS/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/03/13/Oracle-Install/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/19/Nvm-good/" title="NVM 香香的">NVM 香香的</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/life/" title="分类于 life">life</a>
+</div>
+
+    <span><a href="/2023/02/28/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/08/Mysql-Install/" title="Mysql Install">Mysql Install</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/13/Oracle-Install/" title="Oracle Install">Oracle Install</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/01/Dubbo-Study/" title="Dubbo Study">Dubbo Study</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/07/BS-Transfer-CS/" title="B&#x2F;S项目调用C&#x2F;S项目并嵌套页面">B/S项目调用C/S项目并嵌套页面</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/16/Oracle-And-Mysql/" title="Oracle和Mysql的区别">Oracle和Mysql的区别</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/21/Tomcat/" title="Tomcat谈一谈">Tomcat谈一谈</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/2023/03/02/Tomcat-Nginx-Service-Registry/" title="Tomcat And Nginx 服务注册">Tomcat And Nginx 服务注册</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">YangKeCheng @ YangKc Blog</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/03/08/Mysql-Install/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,copy_tex: true,
+    katex: true,mermaid: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',quiz: {
+      choice: "单选题",
+      multiple: "多选题",
+      true_false: "判断题",
+      essay: "问答题",
+      gap_fill: "填空题",
+      mistake: "错题备注"
+    },
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.1.1"></script>
+
+
+
+
+</body>
+</html>
